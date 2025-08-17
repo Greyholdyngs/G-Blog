@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import Header from "../Components/Header"
+import Footer from "../Components/Footer";
 
 const About = () => {
 
     return (
-        <div className="bg-gray-700 h-screen ">
+        <div className="bg-gray-700 ">
             <Header />
             <div className="px-20">
                 <h1 className="font-bold text-5xl my-15 text-center text-white">About Us</h1>
@@ -22,6 +23,7 @@ const About = () => {
                     <Link to="/">Back</Link>
                 </button>
             </div>
+            <Footer />
         </div>
     )
 }

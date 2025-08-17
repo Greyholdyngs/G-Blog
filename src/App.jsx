@@ -1,7 +1,7 @@
 import Header from '../src/Components/Header'
 import Content from '../src/Components/Content'
 import Footer from '../src/Components/Footer'
-import About from '../src/Path/About'
+import Hero from '../src/Components/Hero';
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -17,8 +17,9 @@ function App() {
   ) 
 
   return (
-    <div className=''>
+    <div className='bg-gray-50'>
         <Header />
+        <Hero />
         <Content />
         <Footer />
     </div>

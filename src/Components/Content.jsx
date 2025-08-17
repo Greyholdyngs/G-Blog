@@ -1,4 +1,5 @@
 import AOS from 'aos';
+import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 const Content = () => {
@@ -99,7 +100,7 @@ const Content = () => {
     return (
         <div data-aos="fade-up" className='lg:px-20 md:px-15 sm:px-10 px-5'>
             <div >
-                <label className={`flex flex-col mt-10 rounded-xl md:pl-10 sm:pl-7 pl-5 py-5 shadow-lg focus-within:shadow-none
+                <label className={`flex flex-col mt-10 rounded-xl md:pl-10 sm:pl-7 pl-5 py-5 shadow-lg focus-within:shadow-none bg-white
                                 ${error.postTitle ? "border-2 border-red-500" : " border-1 border-gray-200" }`} 
                                 htmlFor="">
                     <input type="text" 
@@ -134,12 +135,12 @@ const Content = () => {
                                     onClick={handlePost}>Post</button>
                 </div>
             </div>
-            <div data-aos="fade-left">
+            <div data-aos="fade-left" className='cursor-pointer'>
                 {
                     oldPost && oldPost.map((items) => {
                         return (
                             <div data-aos="fade-up" key={items.id}
-                                    className='post my-5 px-6 py-7 border-1
+                                    className='post my-5 px-6 py-7 border-1 bg-white
                                     border-gray-200 rounded-lg shadow-lg transform
                                     transition-transform duration-1000 ease-in-out hover:scale-105 hover:shadow-xl'>
                                 {
@@ -168,11 +169,13 @@ const Content = () => {
                                             </div>
                                         </div>
                                     ) : (
-                                        <div>
+                                        <div className='bg-white'>
                                             <div className='flex justify-between items-center'>
-                                                <h3 className='uppercase md:text-2xl sm:text-xl text-lg font-bold mb-2 transform transition-transform duration-500 ease-in-out hover:scale-90'>
-                                                    <strong>{items.title}</strong>
-                                                </h3>
+                                                <Link to={`/posts/${items.id}`}>
+                                                    <h3 className='uppercase md:text-2xl sm:text-xl text-lg font-bold mb-2 transform transition-transform duration-500 ease-in-out hover:scale-90'>
+                                                        <strong>{items.title}</strong>
+                                                    </h3>
+                                                </Link>
                                                 <div className='flex space-x-3'>
                                                     <button className='hover:border-b-1 hover:text-black  duration-500 border-gray-500
                                                             cursor-pointer text-gray-500 font-semibold transform hover:-translate-x-2'

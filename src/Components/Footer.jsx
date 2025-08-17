@@ -6,7 +6,7 @@ const Footer = () => {
        
 
     return(
-            <footer className='md:flex justify-between items-center bg-gray-100
+            <footer className=' md:flex justify-between items-center bg-gray-100
                                 lg:px-20 md:px-15 sm:px-10 px-5 py-5 shadow-outline mt-15
                                  md:text-left text-center'>
                 <nav className='flex md:justify-start justify-end mb-5 md:mb-0 '>

@@ -5,6 +5,7 @@ import './index.css'
 import App from './App.jsx'
 import About from '../src/Path/About.jsx'
 import Contact from '../src/Path/Contact.jsx'
+import FullPost from '../src/Path/FullPost.jsx'
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: "/contact",
     element: <Contact />
+  },
+  {
+    path: "/posts/:id",
+    element: <FullPost />
   }
 ])
 
